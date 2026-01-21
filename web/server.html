@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title id="page_title"></title>
+    <link rel="stylesheet" href="./css/server.css">
+  </head>
+  <body>
+    <header>
+        <div class="part_header">
+            <h1 class="page_name">作元研究室 サーバー管理ページ by tougo</h1>
+            <h1 class="page_name" id="page_header"></h1>
+        </div>
+    </header>
+    <main>
+      <!-- 最終更新日時 エリア -->
+      <div class="part_latest_update">
+        <p>最終更新日時</p>
+        <hr class="line_horizontal" >
+        <table class="table_latest_update">
+          <tr>
+            <td class="table_header">日時</td>
+            <td id="data_latest_update"></td>
+          </tr>
+        </table>
+      </div>
+      <!-- CPU使用率 エリア -->
+      <div class="part_cpu">
+        <p>CPU使用率(%)</p>
+        <hr class="line_horizontal" >
+        <table class="table_cpu">
+          <tr>
+            <td class="table_header" >ユーザCPU使用時間割合(us)</td>
+            <td class="table_header">カーネルCPU使用時間割合(sy)</td>
+            <td class="table_header">アイドル状態の時間割合(id)</td>
+            <td class="table_header">I/O待ちの時間割合(wa)</td>
+            <td class="table_header">仮想マシンの割当時間における未使用時間割合(st)</td>
+          </tr>
+          <tr id="parent_cpu">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <!-- メモリ使用量 エリア -->
+      <div class="part_memory">
+        <p>メモリ使用量</p>
+        <hr class="line_horizontal">
+        <table class="table_memory" id="parent_memory">
+          <tr>
+              <td class="table_header"></td>
+              <td class="table_header">合計メモリ量:total</td>
+              <td class="table_header">使用済みメモリ量:used</td>
+              <td class="table_header">空きメモリ量:free</td>
+              <td class="table_header">共有メモリのメモリ量:shared</td>
+              <td class="table_header">buff/cache</td>
+              <td class="table_header">すぐ利用可能なメモリ量:available</td>
+          </tr>
+          <tr id="parent_mem">
+            <td>Mem</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="parent_swap">
+            <td>Swap</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <!-- ログイン状況 エリア -->
+      <div class="part_login_user">
+        <p>現在のログイン状況</p>
+        <hr class="line_horizontal">
+        <table class="table_login_user">
+          <tr>
+            <td class="table_header">ユーザー数</td>
+            <td id="data_login_user_number"></td>
+          </tr>
+          <tr id="parent_login_user_name">
+            <td class="table_header">ユーザー名</td>
+          </tr>
+        </table>
+      </div>
+      <!-- プロセス状況 エリア -->
+      <div class="part_process">
+        <p>プロセス状況</p>
+        <hr class="line_horizontal" >
+        <table class="table_process" id="parent_process">
+          <tr>
+            <td class="table_header">ユーザー名</td>
+            <td class="table_header">コマンド</td>
+            <td class="table_header">開始時間</td>
+            <td class="table_header">プロセスID</td>
+            <td class="table_header">プロセス制御端末</td>
+            <td class="table_header">プロセス状態</td>
+            <td class="table_header">プロセス別CPU使用率</td>
+            <td class="table_header">プロセス別メモリ使用率</td>
+          </tr>
+        </table>
+      </div>
+      <!-- ログイン履歴 エリア -->
+      <div class="part_login_log">
+        <p>ログイン履歴</p>
+        <hr class="line_horizontal" >
+        <table class="table_login_log" id="parent_login_log">
+          <tr>
+            <td class="table_header">ユーザー名</td>
+            <td class="table_header">日付，曜日</td>
+            <td class="table_header">開始時間</td>
+            <td class="table_header">終了時間</td>
+            <td class="table_header">ログイン端末</td>
+            <td class="table_header">ホスト名</td>
+          </tr>
+        </table>
+      </div>
+    </main>
+    <!-- javascript参照 -->
+    <script src="./js/server.js"></script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>作元研究室 サーバー管理ページ by tougo</title>
+    <link rel="stylesheet" href="./css/index.css">
+  </head>
+  <body>
+    <header>
+        <div class="part_header">
+            <h1 class="page_name">作元研究室 サーバー管理ページ by tougo</h1>
+        </div>
+    </header>
+    <main>
+        <!-- ホバー時 表示する 不透明要素 -->
+        <div id="overlay"></div>
+        <!-- ホバー時 表示する サブウィンドウ -->
+        <div id="sub_windows">
+          <p id="title_cpu"></p>                <!-- CPU使用率 タイトル -->
+          <p id="text_cpu"></p>                 <!-- 同上 値 -->
+          <p id="title_login_user_number"></p>  <!-- ログインユーザー数 タイトル -->
+          <p id="text_login_user_number"></p>   <!-- 同上 値 -->
+          <p id="title_login_user_name"></p>    <!-- ログインユーザー名 タイトル -->
+          <p id="text_login_user_name"></p>     <!-- 同上 値 -->
+        </div>
+        <!-- サーバー表 -->
+        <div>
+          <p class="table_header">実験サーバー表</p>
+          <hr class="line_horizontal" >
+          <div id="tableAll">
+            <table class="table_servers">
+              <tr>
+                <td class="table_elem">
+                  <a id="server1" href="#">server1</a>
+                </td>
+                <td class="table_elem">
+                  <a id="server2" href="#">server2</a>
+                </td>
+                <td class="table_elem">
+                  <a id="server3" href="#">server3</a>
+                </td>
+                <td class="table_elem">
+                  <a id="server4" href="#">server4</a>
+                </td>
+                <td class="table_elem">
+                  <a id="server5" href="#">server5</a>
+                </td>
+                <td class="table_elem">
+                  <a id="server6" href="#">server6</a>
+                </td>
+                <td class="table_elem">
+                  <a id="server7" href="#">server7</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="table_elem">
+                  <a id="server8" href="#">server8</a>
+                </td>
+                <td class="table_elem">
+                  <a id="server9" href="#">server9</a>
+                </td>
+                <td class="table_elem">
+                  <a id="server10" href="#">server10</a>
+                </td>
+                <td class="table_elem">
+                  <a id="server11" href="#">server11</a>
+                </td>
+                <td class="table_elem">
+                  <a id="server12" href="#">server12</a>
+                </td>
+                <td class="table_elem">
+                  <a id="server13" href="#">server13</a>
+                </td>
+                <td class="table_elem">
+                  <a id="server14" href="#">server14</a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!-- 諸注意，アナウンス欄 -->
+        <div class="part_attention">
+          <p class="part_attention_header">(諸注意)</p>
+          <hr class="line_horizontal" >
+          <!-- CPU使用率可視化 対応色表 -->
+          <p>CPU稼働率可視化:各色対応パーセント</p>
+          <table class="table_cpu_color">
+            <tr>
+              <td>取得失敗</td>
+              <td>0~20(%)</td>
+              <td>21~40(%)</td>
+              <td>41~60(%)</td>
+              <td>61~80(%)</td>
+              <td>81~100(%)</td>
+            </tr>
+            <tr>
+              <td id="color_sample_fail"></td>
+              <td id="color_sample_low"></td>
+              <td id="color_sample_lowmid"></td>
+              <td id="color_sample_mid"></td>
+              <td id="color_sample_highmid"></td>
+              <td id="color_sample_high"></td>
+            </tr>
+          </table>
+        </div>
+        <hr class="line_horizontal" >
+    </main>
+    <!-- javascript参照 -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>

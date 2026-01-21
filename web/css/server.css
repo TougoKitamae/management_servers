@@ -1,0 +1,55 @@
+/**** header ****/
+.part_header
+{
+    height: 100%;
+    background-color:rgb(209, 255, 168);
+    border-top: 10px solid #000000;
+    border-bottom: 10px solid #000000;
+}
+.page_name
+{
+    text-align: center;
+    margin: 0px;
+    padding: 1% 0px 1% 0px;
+}
+/**** main ****/
+.error_txt
+{
+    text-align: center;
+    font-size: 25px;
+}
+/* 各表レイアウト */
+.table_latest_update,
+.table_login_user,
+.table_login_log,
+.table_cpu,
+.table_memory,
+.table_process
+{
+    border-collapse: collapse;
+}
+.part_latest_update p,
+.part_login_user p,
+.part_login_log p,
+.part_cpu p,
+.part_memory p,
+.part_process p
+{
+    font-size: 25px;
+    margin-bottom: 0px;
+}
+.table_header
+{
+    background-color:#dfdfdf;
+}
+.table_latest_update td,
+.table_login_user td,
+.table_login_log td,
+.table_cpu td,
+.table_memory td,
+.table_process td
+{
+    border: 2px solid #000000;
+    font-size: 15px;
+    padding: 10px 10px 10px 10px;
+}

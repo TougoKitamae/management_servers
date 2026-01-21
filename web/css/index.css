@@ -1,0 +1,101 @@
+/**** header ****/
+.part_header
+{
+    height: 100%;
+    background-color:rgb(209, 255, 168);
+    border-top: 10px solid #000000;
+    border-bottom: 10px solid #000000;
+}
+.page_name
+{
+    text-align: center; 
+    margin: 0px;
+    padding: 1% 0px 1% 0px;
+}
+/**** main ****/
+/* 各見出し */
+.table_header,
+.part_attention_header
+{
+    font-size: 25px;
+    margin-bottom: 0px;
+}
+.line_horizontal
+{
+    border: 1px solid #000000;
+}
+/* 実験サーバー表 */
+.table_servers
+{
+    border-collapse: collapse;
+    text-align: center;
+}
+.table_servers td
+{
+    padding: 0%;
+    height: 50px;
+    border: 2px solid #000000;
+    background-color: #dfdfdf;
+    font-size: 20px;
+}
+.table_servers a
+{
+    padding: 20px 30px 20px 30px;
+}
+#tableAll                          /* 表 見切れた際 スクロール可能にする */
+{
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+/* ホバー時 表示する サブウィンドウ */
+#sub_windows
+{
+    position: absolute;
+    opacity: 0;
+    width: 200px;
+    height: auto;
+    pointer-events: none;           /* 子要素aタグのクリック判定を可能にする */
+    background-color: #dfdfdf;
+    border: 1px solid #000000;
+    padding: 10px 10px 10px 10px;
+    /*padding: 15px 15px 15px 15px;*/
+}
+#sub_windows p
+{
+    font-size: 12px;
+    margin: 0%;
+}
+#text_cpu,
+#text_login_user_number,
+#text_login_user_name
+{
+    text-align: right;
+}
+#sub_windows.show                   /* 表示時のみ アニメーション */
+{
+    transition: opacity 0.5s;
+}
+/* ホバー時 表示する サブウィンドウ */
+#overlay
+{
+    position: absolute;
+    opacity: 0;
+    width: 150px;
+    height: 50px;
+    pointer-events: none;
+    background-color: #5f5f5f82;
+}
+/* 諸注意，アナウンス欄 */
+.table_cpu_color
+{
+    border-collapse: collapse;
+    text-align: center;
+}
+.table_cpu_color td
+{
+    padding: 0%;
+    height: 50px;
+    border: 2px solid #000000;
+    background-color: #dfdfdf;
+    font-size: 15px;
+}
